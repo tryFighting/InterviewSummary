@@ -12,13 +12,37 @@
 #import "Genericity.swift"
 #import <Security/Security.h>
 #import "KeychainItemWrapper.h"
+#import "JLKeyChain.h"
+#define KEY_IN_KEYCHAIN @"com.yck.app.allinfo"
+#define KEY_PASSWORD  @"com.yck.app.password"
 @interface ViewController ()
 {
     UIImageView *imageV ;
 }
 @end
 
+
 @implementation ViewController
+
+#pragma mark---存储用户的x一些敏感信息
++(void)savePassWord:(NSString *)password
+{
+    NSMutableDictionary *passwordDict = [NSMutableDictionary
+                                         dictionary];
+    [passwordDict setObject:password forKey:KEY_PASSWORD];
+    [JLKeyChain save:KEY_IN_KEYCHAIN data:passwordDict];
+}
++(id)readPassWord
+{
+    NSMutableDictionary *passwordDict = (NSMutableDictionary *)
+    [JLKeyChain load:KEY_IN_KEYCHAIN];
+    return [passwordDict objectForKey:KEY_PASSWORD];
+}
++(void)deletePassWord
+{
+    [JLKeyChain delete:KEY_IN_KEYCHAIN];
+}
+
 #pragma mark --keychain获取UUID
 - (NSString *)getKeychain {
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper
