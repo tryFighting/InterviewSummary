@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "TestStruct.h"
 #import "TestBlock.h"
-#import "Genericity.swift"
 #import <Security/Security.h>
 #import "KeychainItemWrapper.h"
 #import "JLKeyChain.h"
@@ -23,7 +22,7 @@
 
 
 @implementation ViewController
-
+///kCFRunLoopCommonModes  kCFRunLoopDefaultMode
 #pragma mark---存储用户的x一些敏感信息
 +(void)savePassWord:(NSString *)password
 {
@@ -122,7 +121,12 @@ return result;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    return;
+    NSLog(@"1");
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
     
     imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.png"]];
     imageV.frame = CGRectMake(50, 100, 200, 50);
