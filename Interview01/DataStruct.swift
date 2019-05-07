@@ -60,7 +60,10 @@ import UIKit
  weak比unowned更安全（其中一方什么时候赋值为nil,对对方都没有影响）
  unowned比weak性能更好一点（一个对象销毁，另一个对象也要跟着销毁，可以用unowned解决）
  
- 
+ 加分回答:
+ weak和unowned的使用差别：
+ 当访问对象时该对象可能已经释放了，则用weak,
+ 当访问对象确定不肯能释放，则用unowned
  
  
  Runtime是如何将weak修饰的属性置为nil
@@ -93,6 +96,27 @@ import UIKit
  libBacktraceRecording.dylib :   6.25 milliseconds (8.4%)
  libMainThreadChecker.dylib :  38.21 milliseconds (51.4%)
  libswiftCore.dylib :   2.16 milliseconds (2.9%)
+ 
+ 
+ 
+ 
+ 访问控制权限：
+ 
+ open,public,internal,file-private,private
+ 
+ Open具备最高的访问权限，其修饰的类和方法可以在任意Module中被访问和重写
+ 
+ Public仅次于Open,与Open唯一的区别在于它修饰的对象可以在任意Module中访问，但不能重写
+ 
+ Internal是默认的权限，它只能在当前定义的Module中访问和重写，它可以被一个Module中的多个文件访问，但不可以被其他的Module中被访问
+ 
+ File-private 其修饰的对象只能在当前文件中被使用。例如它可以被一个文件中的不同class,extension,struct共同使用
+ 
+ Private是最低的访问权限，它的对象只能在定义的作用域内及其对应的扩展内使用，离开了这个对象，即便是同一文件中的对象，也无法访问
+
+ 
+ 面向协议编程：POP/ 面向对象编程：OOP
+ 更加灵活，减少依赖，消除动态分发的风险，协议可以用于值类型
  */
 class DataStruct: NSObject {
     
