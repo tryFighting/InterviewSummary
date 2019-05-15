@@ -26,6 +26,8 @@
 		7B1327D6227157B8003A86FB /* JLKeyChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLKeyChain.m; sourceTree = "<group>"; };
 		7B4EF582226727EA00C91FBE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		7B4EF583226727EB00C91FBE /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		7B6209CB228A616C0065B111 /* Runloop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Runloop.md; sourceTree = "<group>"; };
+		7B6209CC228A6DEB0065B111 /* NetWork.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NetWork.md; sourceTree = "<group>"; };
 		7B77375B22729DEE0050916E /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
 		7BB3D5E82266BD66001A526A /* Interview01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interview01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB3D5EB2266BD66001A526A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +90,8 @@
 				7BB3D6012266BD94001A526A /* ViewController.h */,
 				7BB3D6032266BD94001A526A /* ViewController.m */,
 				7B77375B22729DEE0050916E /* DataStruct.swift */,
+				7B6209CB228A616C0065B111 /* Runloop.md */,
+				7B6209CC228A6DEB0065B111 /* NetWork.md */,
 				7BB3D60D2266D9A5001A526A /* 1.png */,
 				7BB3D5F12266BD66001A526A /* Main.storyboard */,
 				7BB3D5F42266BD68001A526A /* Assets.xcassets */,
