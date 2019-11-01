@@ -121,7 +121,7 @@ return result;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    return;
+    self.view.backgroundColor = UIColor.whiteColor;
     NSLog(@"1");
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSLog(@"2");
